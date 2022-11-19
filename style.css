@@ -1,22 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Questrial);
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script:700);
 
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #333333;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #9C27B0;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: black;
-}   
-
 html,
 body {
     width: 100%;
@@ -138,6 +122,10 @@ footer {
     transition: padding .2s ease-in;
 }
 
+.navbar-brand {
+    transition: all 1s;
+}
+
 .navbar-header > .navbar-brand:hover,
 .navbar-header > .navbar-brand:focus {
     color: #8b27b0;
@@ -242,12 +230,13 @@ header {
     color: #fff;
     width: 100%;
     background-color: #c9c9c9;
-    background-image: url('https://img2.akspic.ru/crops/0/7/2/0/7/170270/170270-nacionalnyj_park_komodo-komodo-ostrov_padar-rinka-komodo_drakon-3840x2160.jpg');
+    background-image: url('https://img2.akspic.ru/crops/5/1/4/9/6/169415/169415-rastenie-atmosfera-oblako-prirodnyj_landshaft-okruzhayushchaya_sreda-3840x2160.jpg');
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    transition: background-image 1s;
 }
 
 header .header-content {
@@ -435,6 +424,11 @@ textarea {
     border: 2px solid white;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
+    transition: all 1s;
+}
+
+.inner a {
+    transition: all 1s;
 }
 
 .btn-default {
@@ -537,8 +531,6 @@ img::-moz-selection {
     color: #fff;
     background: 0 0;
 }
-
-inner
 
 .yanarow {
     margin-top: 20px;

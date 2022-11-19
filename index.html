@@ -12,13 +12,13 @@
 
     <link rel="mask-icon" type="" href="./logo.jpg" color="#111" />
     <title>Ibrohim's Portfolio</title>
-    <meta name="description"
-        content="Hello my name is ibrohim. And it is my Portfolio Web Site." />
+    <meta name="description" content="Hello my name is ibrohim. And it is my Portfolio Web Site." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Codeply">
     <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./extension.css">
     <link rel="stylesheet" href="./style.css">
     <script>
         window.console = window.console || function (t) {};
@@ -31,7 +31,6 @@
             window.parent.postMessage("resize", "*");
         }
     </script>
-
 
 </head>
 
@@ -50,31 +49,39 @@
             <div class="navbar-collapse collapse" id="bs-navbar">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a class="page-scroll" href="#first">Intro</a>
+                        <a class="page-scroll nav-title nav-intro" href="#first">Intro</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#one">About</a>
+                        <a class="page-scroll nav-title nav-about" href="#one">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#skills">Skills</a>
+                        <a class="page-scroll nav-title nav-skills" href="#skills">Skills</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#three">Projects</a>
+                        <a class="page-scroll nav-title nav-projects" href="#three">Projects</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#four">Features</a>
+                        <a class="page-scroll nav-title nav-features" href="#four">Features</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#two">My Tools</a>
+                        <a class="page-scroll nav-title nav-tools" href="#two">My Tools</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#last">Contact</a>
+                        <a class="page-scroll nav-title nav-contact" href="#last">Contact</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" data-toggle="modal" title="A free Bootstrap video landing theme"
-                            href="#aboutModal">About</a>
+                    <li class="light-m-button">
+                        <a class="page-scroll nav-title" onclick="lightMode()" href="#lightmode">Light</a>
+                    </li>
+                    <li class="dark-m-button" style="display: none;">
+                        <a class="page-scroll nav-title" onclick="darkMode()" href="#darkmode">Dark</a>
+                    </li>
+                    <li class="ru-button">
+                        <a class="page-scroll nav-title" onclick="toRU()" href="#rumode">RU</a>
+                    </li>
+                    <li class="en-button" style="display: none;">
+                        <a class="page-scroll nav-title" onclick="toENG()" href="#engmode">EN</a>
                     </li>
                 </ul>
             </div>
@@ -82,27 +89,23 @@
     </nav>
     <header id="first">
         <div class="header-content">
-            <div class="inner">
-                <h1 class="cursive">Khasanov Ibrohim's Portfolio</h1>
-                <h4>Future is alredy here! Open your eyes, And look!</h4>
+            <div class="inner intro-box">
+                <h1 class="cursive intro-title" id="intro-title">Khasanov Ibrohim's Portfolio</h1>
+                <h4 class="intro-text" id="intro-text">Future is alredy here! Open your eyes, And look!</h4>
                 <hr>
-                <a href="#one" class="btn btn-primary btn-xl page-scroll about-stil">About Me</a>
+                <a href="#one" class="btn btn-primary btn-xl page-scroll about-stil intro-button">About Me</a>
             </div>
         </div>
-        <video autoplay="" loop="" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s"
-            poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg" id="video-background">
-            <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Traffic-blurred2.mp4" type="video/mp4">Your
-            browser does not support the video tag. I suggest you upgrade your browser.
-        </video>
     </header>
-    <section class="bg-primary" id="one">
+    <section class="about-section" id="one" style="background-color: #333;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
-                    <h2 class="margin-top-0 text-primary">Hi!</h2>
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center about-box">
+                    <h2 class="margin-top-0 text-primary about-title" style="color: #9c27b0;">Hi!</h2>
                     <br>
-                    <p class="text-faded">
-                        My name is... Ibrohim I am a few years old, I have been interested in programming for over 3 years
+                    <p style="color: rgba(245,245,245,0.7);" id="about-text">
+                        My name is... Ibrohim I am a few years old, I have been interested in programming for over 3
+                        years
                         and I am currently a Full-Stack developer
 
                         I know languages like JavaScript, NodeJS And Im a Student
@@ -110,12 +113,12 @@
 
 
                     </p>
-                    <a href="#three" class="btn btn-default btn-xl page-scroll">Watch my projects</a>
+                    <a href="#three" class="btn btn-default btn-xl page-scroll about-btn">Watch my projects</a>
                 </div>
             </div>
         </div>
     </section>
-    <aside class="bg-dark" id="skills">
+    <aside class="bg-dark" id="skills" style="background-color: #222;">
         <div class="container text-center">
             <div class="call-to-action">
                 <h2 class="text-primary">My Skills</h2>
@@ -201,19 +204,21 @@
                     <div class="row yanarow">
                         <h2 class="margin-top-0 wow fadeIn">Backend</h2>
                         <div class="col-sm-3 col-xs-6 text-center">
-                            <img src="https://img.icons8.com/ios-filled/100/eeeeee/api-settings.png"/>
+                            <img src="https://img.icons8.com/ios-filled/100/eeeeee/api-settings.png" />
                             <h5>RestApi</h5>
                         </div>
                         <div class="col-sm-3 col-xs-6 text-center">
-                            <img src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/100/eeeeee/external-graphql-an-open-source-data-query-and-manipulation-language-for-api-logo-bold-tal-revivo.png"/>
+                            <img
+                                src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/100/eeeeee/external-graphql-an-open-source-data-query-and-manipulation-language-for-api-logo-bold-tal-revivo.png" />
                             <h5>GraphQL</h5>
                         </div>
                         <div class="col-sm-3 col-xs-6 text-center">
-                            <img src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/100/eeeeee/external-mongodb-a-cross-platform-document-oriented-database-program-logo-bold-tal-revivo.png"/>
+                            <img
+                                src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/100/eeeeee/external-mongodb-a-cross-platform-document-oriented-database-program-logo-bold-tal-revivo.png" />
                             <h5>MongoDB</h5>
                         </div>
                         <div class="col-sm-3 col-xs-6 text-center">
-                            <img src="https://img.icons8.com/ios-filled/100/eeeeee/postgreesql.png"/>
+                            <img src="https://img.icons8.com/ios-filled/100/eeeeee/postgreesql.png" />
                             <h5>PostgresQL</h5>
                         </div>
                     </div>
@@ -223,11 +228,18 @@
     </aside>
     <section id="three" class="no-padding">
         <div class="container-fluid">
-            <div class="row no-gutter" style="background-color: #222222;">
+            <div class="row no-gutter" id="threee" style="background-color: #222222;">
                 <h2 class="text-primary" style="text-align: center; margin-bottom: 40px;">My Projects</h2>
-                <div style="border: 5px solid #222222;" class="col-lg-4 col-sm-6 yangiimg">
-                    <h2 class="text-primary" style="text-align: center; margin-bottom: 40px; font-size: 20px;"><a style="color: white;" href="https://matrass-1.netlify.app/">Mattresses</a></h2>
+<<<<<<< HEAD
+                <div id="three-box" style="border: 5px solid #222222;" class="col-lg-4 col-sm-6 yangiimg">
+                    <h2 class="text-primary" style="text-align: center; margin-bottom: 40px; font-size: 20px;"><a
+                            style="color: white;" href="https://matrass-1.netlify.app/">Mattresses</a></h2>
                     <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./img/matrasfull.png">
+=======
+                <div style="border: 5px solid #222222;" class="col-lg-4 col-sm-6 yangiimg">
+                    <h2 class="text-primary" style="text-align: center; margin-bottom: 40px; font-size: 20px;"><a style="color: white;" href="">Mattresses</a></h2>
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./img/matras.png">
+>>>>>>> parent of 7720510 (2.1)
                         <img src="./img/matras.png" class="img-responsive" alt="Image 1">
                         <div class="gallery-box-caption">
                             <div class="gallery-box-content">
@@ -239,8 +251,15 @@
                     </a>
                 </div>
                 <div style="border: 5px solid #222222;" class="col-lg-4 col-sm-6">
-                    <h2 class="text-primary" style="text-align: center; margin-bottom: 40px; font-size: 20px;"><a style="color: white;" href="https://californiaphones.netlify.app/">California Phones</a></h2>
+<<<<<<< HEAD
+                    <h2 class="text-primary" style="text-align: center; margin-bottom: 40px; font-size: 20px;"><a
+                            style="color: white;" href="https://californiaphones.netlify.app/">California Phones</a>
+                    </h2>
                     <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./img/californiafull.png">
+=======
+                    <h2 class="text-primary" style="text-align: center; margin-bottom: 40px; font-size: 20px;"><a style="color: white;" href="https://californiaphones.netlify.app/">California Phones</a></h2>
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./img/california.png">
+>>>>>>> parent of 7720510 (2.1)
                         <img src="./img/california.png" class="img-responsive" alt="Image 2">
                         <div class="gallery-box-caption">
                             <div class="gallery-box-content">
@@ -252,11 +271,18 @@
                     </a>
                 </div>
                 <div style="border: 5px solid #222222;" class="col-lg-4 col-sm-6">
+<<<<<<< HEAD
+                    <h2 class="text-primary" style="text-align: center; margin-bottom: 40px; font-size: 20px;"><a
+                            style="color: white;" href="https://seriesxbox.netlify.app/">XBOX Series X</a></h2>
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./img/xboxfull.png">
+                        <img src="./img/xbox.png" class="img-responsive" alt="Image 3">
+=======
                     <h2 class="text-primary" style="text-align: center; margin-bottom: 40px; font-size: 20px;"><a style="color: white;" href="https://seriesxbox.netlify.app/">XBOX Series X</a></h2>
                     <a href="#galleryModal" class="gallery-box" data-toggle="modal"
-                        data-src="./img/xboxfull.png">
+                        data-src="./img/xbox.png">
                         <img src="./img/xbox.png"
                             class="img-responsive" alt="Image 3">
+>>>>>>> parent of 7720510 (2.1)
                         <div class="gallery-box-caption">
                             <div class="gallery-box-content">
                                 <div>
@@ -267,9 +293,15 @@
                     </a>
                 </div>
                 <div style="border: 5px solid #222222;" class="col-lg-4 col-sm-6">
+<<<<<<< HEAD
+                    <h2 class="text-primary" style="text-align: center; margin-bottom: 40px; font-size: 20px;"><a
+                            style="color: white;" href="https://realestatehouses.netlify.app/">Real Estate</a></h2>
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./img/RealEstatefull.png">
+=======
                     <h2 class="text-primary" style="text-align: center; margin-bottom: 40px; font-size: 20px;"><a style="color: white;" href="https://realestatehouses.netlify.app/">Real Estate</a></h2>
                     <a href="#galleryModal" class="gallery-box" data-toggle="modal"
-                        data-src="./img/RealEstatefull.png">
+                        data-src="./img/RealEstate.png">
+>>>>>>> parent of 7720510 (2.1)
                         <img src="./img/RealEstate.png" class="img-responsive" alt="Image 4">
                         <div class="gallery-box-caption">
                             <div class="gallery-box-content">
@@ -281,11 +313,18 @@
                     </a>
                 </div>
                 <div style="border: 5px solid #222222;" class="col-lg-4 col-sm-6">
+<<<<<<< HEAD
+                    <h2 class="text-primary" style="text-align: center; margin-bottom: 40px; font-size: 20px;"><a
+                            style="color: white;" href="https://kbm-animals-clinic.netlify.app/">Vet Clinic</a></h2>
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./img/vetfull.jpg">
+                        <img src="./img/vet.png" class="img-responsive" alt="Image 5">
+=======
                     <h2 class="text-primary" style="text-align: center; margin-bottom: 40px; font-size: 20px;"><a style="color: white;" href="https://kbm-animals-clinic.netlify.app/">Vet Clinic</a></h2>
                     <a href="#galleryModal" class="gallery-box" data-toggle="modal"
-                        data-src="./img/vetfull.jpg">
+                        data-src="./img/vet.png">
                         <img src="./img/vet.png"
                             class="img-responsive" alt="Image 5">
+>>>>>>> parent of 7720510 (2.1)
                         <div class="gallery-box-caption">
                             <div class="gallery-box-content">
                                 <div>
@@ -296,11 +335,17 @@
                     </a>
                 </div>
                 <div style="border: 5px solid #222222;" class="col-lg-4 col-sm-6">
-                    <h2 class="text-primary" style="text-align: center; margin-bottom: 40px; font-size: 20px;"><a style="color: white;" href="#soon">PlayStation Store</a></h2>
+                    <h2 class="text-primary" style="text-align: center; margin-bottom: 40px; font-size: 20px;"><a
+                            style="color: white;" href="#soon">PlayStation Store</a></h2>
                     <a href="#galleryModal" class="gallery-box" data-toggle="modal"
+<<<<<<< HEAD
                         data-src="./img/playstationfull.png">
+                        <img src="./img/playstation.png" class="img-responsive" alt="Image 6">
+=======
+                        data-src="./img/playstation.png">
                         <img src="./img/playstation.png"
                             class="img-responsive" alt="Image 6">
+>>>>>>> parent of 7720510 (2.1)
                         <div class="gallery-box-caption">
                             <div class="gallery-box-content">
                                 <div>
@@ -380,14 +425,14 @@
                 <div class="col-lg-4 col-md-4 text-center">
                     <div class="feature">
                         <img src="https://img.icons8.com/color/96/000000/visual-studio-code-2019.png" />
-                        <h3><a href="https://code.visualstudio.com/" style="color: white;">Visual Studio Code</a></h3>
+                        <h3>Visual Studio Code</h3>
                         <p class="text-muted"></p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 text-center">
                     <div class="feature">
                         <img src="https://img.icons8.com/fluency/96/000000/sublime-text.png" />
-                        <h3><a href="https://www.sublimetext.com/" style="color: white;">Sublime Text</a></h3>
+                        <h3>Sublime Text</h3>
                         <p class="text-muted"></p>
                     </div>
                 </div>
@@ -419,21 +464,26 @@
                                 </g>
                             </g>
                         </svg>
-                        <h3><a href="https://github.com/" style="color: white;">GitHub</a></h3>
+                        <h3>GitHub</h3>
                         <p class="text-muted"></p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 text-center">
                     <div class="feature">
-                        <img src="https://img.icons8.com/color/96/000000/intellij-idea.png"/>
+<<<<<<< HEAD
+                        <img src="https://img.icons8.com/color/96/000000/intellij-idea.png" />
                         <h3><a href="https://www.jetbrains.com/ru-ru/idea/" style="color: white;">Intelij-Idea</a></h3>
+=======
+                        <img src="https://img.icons8.com/color/48/000000/intellij-idea.png"/>
+                        <h3>Intelij-Idea</h3>
+>>>>>>> parent of 7720510 (2.1)
                         <p class="text-muted"></p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 text-center">
                     <div class="feature">
                         <img src="https://img.icons8.com/color/96/000000/figma--v1.png" />
-                        <h3><a href="https://www.figma.com/" style="color: white;">Figma</a></h3>
+                        <h3>Figma</h3>
                         <p class="text-muted"></p>
                     </div>
                 </div>
@@ -441,14 +491,14 @@
                     <div class="feature">
                         <img
                             src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/000000/external-postman-is-the-only-complete-api-development-environment-logo-shadow-tal-revivo.png" />
-                        <h3><a href="https://www.postman.com/" style="color: white;">PostMan</a></h3>
+                        <h3>PostMan</h3>
                         <p class="text-muted"></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="last">
+    <section class="contact" id="last">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -460,32 +510,41 @@
                     <form class="contact-form row">
                         <div class="col-md-4">
                             <label></label>
-                            <input type="text" class="form-control" placeholder="Name">
+                            <input type="text" class="form-control" id="nameInp" placeholder="Name">
                         </div>
                         <div class="col-md-4">
                             <label></label>
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="text" class="form-control" id="emailInp" placeholder="Email">
                         </div>
                         <div class="col-md-4">
                             <label></label>
-                            <input type="text" class="form-control" placeholder="Phone">
+                            <input type="text" class="form-control" id="phoneInp" placeholder="Phone">
                         </div>
                         <div class="col-md-12">
                             <label></label>
-                            <textarea class="form-control" rows="9" placeholder="Your message here.."></textarea>
+                            <textarea class="form-control" rows="9" id="descInp" placeholder="Your message here.."></textarea>
                         </div>
                         <div class="col-md-4 col-md-offset-4">
                             <label></label>
-                            <button type="button" data-toggle="modal" data-target="#alertModal"
-                                class="btn btn-primary btn-block btn-lg">Send <i
-                                    class="ion-android-arrow-forward"></i></button>
+                            <button onclick="contactWithMe()" type="button" class="btn btn-primary btn-block btn-lg">Send <i class="ion-android-arrow-forward"></i></button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    <footer id="footer">
+    <section class="registered" style="display: none;" id="last">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="margin-top-0 wow fadeIn">You have already submitted an application</h2>
+                    <hr class="primary">
+                    <p>If I didn't answer you, just wait.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-6 col-sm-3 column">
@@ -584,14 +643,14 @@
             </div>
             <br />
             <span class="pull-right text-muted small"><a href="https://t.me/ibroxim_KHasanov">Portfolio by
-                    Khasanov Ibrohim</a> ©2022</span>
+                    Khasanov Ibrohim</a> ©2022 - v5.0 Developer Beta</span>
         </div>
     </footer>
     <div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-body">
-                    <img src="//placehold.it/1200x700/222?text=..." id="galleryImage" class="img-responsive"/>
+                    <img src="//placehold.it/1200x700/222?text=..." id="galleryImage" class="img-responsive" />
                     <p>
                         <br />
                         <button class="btn btn-primary btn-lg center-block" data-dismiss="modal"
@@ -654,7 +713,6 @@
                         <a href="https://t.me/ibrohim_KHasanov" class="text-center">Telegram</a>
                         <a href="https://t.me/ibrohimkhasanov_uz" class="text-center">TelegramBlog</a>
                         <a href="https://github.com/KhasanovIbrohim" class="text-center">GitHub</a>
-                        <a href="https://www.instagram.com/ibrohimdeveloper/" class="text-center">Instagram</a>
                         <a href="https://codepen.io/is-slavk">CodePen</a>
                     </div>
                     <br />
